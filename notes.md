@@ -58,7 +58,7 @@ Using a Query Builder instead of "INSERT INTO users"
 
     table("users").insert()
 
-We will use a Query Builder called knexjs - http://knexjs.org/#Builder-del%20/%20delete
+We will use a Query Builder called knexjs - http://knexjs.org
 
 # Dependencies
 
