@@ -13,7 +13,7 @@ SQL commands always end with a semi-colon, which allows you to split commands up
     FROM users
     WHERE name = 'Jason Maurer';
 
-# DML example - don't forget the WHERE
+# DML example - Don't forget the WHERE!!
 
 ## Create
 
@@ -63,3 +63,5 @@ We will use a Query Builder called [knexjs]("http://knexjs.org/#Builder-del%20/%
 # Dependencies
 
     npm i knex sqlite3
+
+Notes based on lecture by Jason Maurer.
