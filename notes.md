@@ -64,4 +64,26 @@ We will use a Query Builder called [knexjs]("http://knexjs.org/#Builder-del%20/%
 
     npm i knex sqlite3
 
-Notes based on lecture by Jason Maurer.
+[knex cheatsheet](`https://devhints.io/knex`)
+
+## Misc
+
+- .first() returns the first item in the array that will be sent back
+  Notes based on lecture by Jason Maurer.
+
+- to return the newly updated object in a post instead of just the id using try catch (async/await) instead of returning id return a new query to posts for the id
+
+        try {
+        const payload = {
+        title: req.body.title,
+        contents: req.body.contents
+        };
+        const [id] = await db("posts").insert(payload);
+        res.json(
+        await db("posts")
+        .where("id", id)
+        .first()
+        );
+        } catch (err) {
+        next(err);
+        }
